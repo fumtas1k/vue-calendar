@@ -1,20 +1,15 @@
 <template lang="pug">
   #app
-    HelloWorld(:value.sync="count")
+    Calendar
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Calendar from "./components/Calendar.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
-  },
-  data() {
-    return {
-      count: 0,
-    };
+    Calendar,
   },
 };
 </script>
