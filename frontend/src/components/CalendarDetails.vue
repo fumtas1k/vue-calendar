@@ -12,14 +12,25 @@ div
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+import CalendarDetails from "./CalendarDetails.vue";
 
 export default {
-  name: "CalendarDetails",
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Calendar",
+  components: {
+    CalendarDetails,
+  },
   computed: {
     ...mapGetters("events", ["events"]),
+    // events() {
+    //   return this.$store.getters["events/events"];
+    // },
   },
   methods: {
     ...mapActions("events", ["fetchEvents"]),
+    // fetchEvents() {
+    //   this.$store.dispatch("events/fetchEvents");
+    // },
   },
 };
 </script>
